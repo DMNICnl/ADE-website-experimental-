@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+    <script src="pageAnimation.js"></script>
+    <link rel="icon" type="image/png" href="imgs/Zonder titel391_20250406173930.png">
+    <title>ADE Autobedrijf</title>
+</head>
+<body>
+<!-- header  -->
+<div id="main-content">
+
+ <img id="engineImg" src="imgs/Zonder titel392_20250409194218.png" alt="Engine img">
+ <header>
+  <div class="logo-wrapper">
+      <img class="logo" src="imgs/Zonder titel125_20250311222939.png" alt="ADE logo" />
+  </div>
+
+  <nav id="nav">
+      <ul class="navLinks" id="navLinks">
+          <li id="home" onclick="homePageAnimations()"><a href="#" class="nav-link">Home</a></li>
+          <li id="over"><a href="#" class="nav-link">Over ons</a></li>
+          <li id="diensten" onclick="moveDienstenBtns()"><a href="#" class="nav-link">Diensten</a></li>
+          <li id="klantlog"><a href="#" class="nav-link">Klant login</a></li>
+          <li id="contact"><a href="#" class="nav-link">Contact</a></li>
+      </ul>
+  </nav>
+
+  <div class="hamburger" id="hamburger"></div> <!-- Removed the ☰ character -->
+</header>
+<!-- home page stuff -->
+<div id="homePage">   
+  <div class="openingsTijden">
+      <h1 id="h1">ADE Autobedrijf</h1>
+      <div class="openings-info">
+          <h2 id="opTijden">Openingstijden</h2>
+          <ul>
+              <li>Maandag   :  9:00 - 17:30</li>
+              <li>Dinsdag  :  9:00 - 17:30</li>
+              <li>Woensdag  :  9:00 - 17:30</li>
+              <li>Donderdag  :  9:00 - 17:30</li>
+              <li>Vrijdag  :  9:00 - 17:00</li>
+              <li>Zaterdag  :  10:00 - 13:00</li>
+              <li>Zondag  :  Gesloten</li>
+          </ul>
+          
+          <p id="p1">Adres:</p>
+          <p>Vlotlaan 26</p>
+          <p>2681RX Monster</p>
+          
+          <p>Tel: +31 (0) 617286030</p>
+          <p>Email: info@ade-auto.nl</p>
+      </div>
+  </div>
+
+  <div id="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d526.2390512834644!2d4.171497126950001!3d52.01742727204317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5adf170b246b3%3A0xe9122f7081dd242b!2sAde%20Autobedrijf!5e1!3m2!1snl!2snl!4v1741991376529!5m2!1snl!2snl" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+  </div>
+</div>
+<!-- about us page stuff -->
+<div id="overOnsPage">
+    <h2>Over ons</h2>
+    <p>Welkom bij ADE Autobedrijf, waar passie voor Duitse auto’s en technische perfectie samenkomen. Al meer dan 25 jaar zetten wij ons in voor hoogwaardige service en vakmanschap. Of het nu gaat om onderhoud, reparaties of technische optimalisaties – bij ons bent u aan het juiste adres.</p><br>
+    <p>Met uiterste precisie werken we aan alles wat onder de motorkap zit. Of het nu gaat om een complexe diagnose, elektronica, motoronderhoud of een ander technisch vraagstuk, wij zorgen ervoor dat uw auto altijd in topconditie is.</p><br>
+    <p>Bij ADE Autobedrijf draait het niet om titels of labels – wij laten ons werk spreken. Met een nuchtere en doelgerichte aanpak zorgen we ervoor dat u weer zorgeloos de weg op kunt. Uw auto verdient het beste, en dat is precies wat wij leveren.</p>
+
+</div>
+<!-- diensten page -->
+<div id="dienstenPage">
+    <div class="buttons">
+        <button id="butOnder" data-action="showOnderhoud">Onderhoud</button>
+        <button id="butDiag"data-action="showDiagnose">Diagnose</button>
+        <button id="butRep" data-action="showReparaties">Reparaties</button>
+        <button id="butElek" data-action="showElektronica">Elektronica</button>
+        <button id="butFoto" data-action="showFotogalerij">Fotogalerij</button>
+    </div>
+
+<div class="diagnostenKnopjesInfo">  
+    <div class="page" id="onderhoud">
+        <div class="onderhoudT">
+        <img src="imgs/engine-oil-2.png" alt="engine oil icon">
+    <p>Goed onderhoud is onderhoud dat precies op tijd wordt uitgevoerd en volgens de voorschriften van de autofabrikant. Dat onderhoud zorgt ervoor dat er niets kapot gaat wat weer gerepareerd moet worden. De onderdelen en vloeistoffen die bij onderhoud vervangen worden kosten beduidend minder dan de reparatie die het gevolg is van het uitstellen van onderhoud. Met goed onderhoud bespaart je dus op de lange duur dus kosten.</p>
+    <br>       
+    <p id="h3" style="    font-style: italic;">Wat info nodig over smeermiddelen of vloeistoffen? klik dan op een van de onderstaande logo`s en ontdek meer...</p>
+</div>
+<div class="onderhoudImgs">
+    <a href="https://www.kroon-oil.com/"> <img id="kroonOil" src="imgs/kroonoillogo.svg" alt="Kroon oil logo"></a>
+    <a href="https://www.shell.nl/"> <img id="shellLogo" src="imgs/shelllogo.svg" alt="Shell logo">  </a>
+    <a href="https://be.pli-petronas.com/nl/startpagina"> <img id="petronasLogo" src="imgs/petronaslogo.svg" alt="Petronas logo">    </a>
+</div>
+
+    </div>
+
+    <div class="page" id="diagnose">
+        <p>Een goede diagnose is de eerste stap naar een oplossing. Met geavanceerde apparatuur en expertise sporen we storingen snel en nauwkeurig op, voordat ze grotere problemen veroorzaken. Dit bespaart tijd, kosten en voorkomt onnodige reparaties.</p><br>
+        <p style="    font-style: italic;">Twijfel je over een storing? Laat een diagnose uitvoeren en ontdek wat jouw auto echt nodig heeft.</p>
+
+        <div id="diagnoseImgs">
+          <div class="arc-container">
+            <img src="imgs/eraseCodes.png" alt="1">
+            <img src="imgs/readCodes.png" alt="2">
+            <img src="imgs/readiness.png" alt="3">
+            <img src="imgs/liveData.png" alt="4">
+            <img src="imgs/vehInfo.png" alt="5">
+            </div>
+        </div>
+    </div>
+    <div class="page" id="Reparaties">
+        <img id="mercedes" src="imgs/mercedes-benz.png" alt="mercedes-benz">
+        <p>   Soms is een reparatie onvermijdelijk. Of het nu gaat om slijtage, een defect onderdeel 
+    Door snel en efficiënt te werken, voorkomen we extra kosten en zorgen we ervoor dat je auto weer veilig en betrouwbaar de weg op kan.</p>
+
+    </div>
+    <div class="page" id="elektronica">
+        <p>Moderne voertuigelektronica brengt comfort, veiligheid en prestaties samen. Of het nu gaat om geavanceerde rijhulpsystemen, storingsdiagnose of maatwerkoplossingen, wij zorgen ervoor dat alles feilloos werkt. Met precisie en expertise brengen we technologie en rijervaring in perfecte harmonie.</p>
+        <div class="reveal-container">
+        <img id="img057"  class="reveal-img" src="imgs/IMG_0057.png" alt="PCB trace">
+        </div>
+    </div>
+    <div class="page" id="fotogalerij">Fotogalerij
+        <img id="constructImg" src="imgs/page-currently-under-construction.jpg" alt="Sorry this page currently under construction img">
+
+    </div>
+</div>      
+</div>
+<!-- klant login page -->
+<div id="klantLoginPage">
+    <div class="loginForm" id="login-form">
+        <h2 style="color: aliceblue; padding: 20px;">Login</h2>
+        <input type="text" placeholder="Email/telefoon">
+        <input type="password" placeholder="Wachtwoord">
+        <button type="submit" id="klant-login-btn">Login</button>
+        <p style="color: aliceblue;">Heeft u geen account?<a id="aanmelden" style="color: aqua;" href="/contact.html">Aanmelden</a></p>
+    </div>
+</div>
+<!-- contact page -->
+<div id="contactPage">
+    <h2>Contactformulier</h2>
+    <p>Heeft u vragen?</p><br>
+    <p>Vul het contactformulier in
+        en wij nemen zo spoedig mogelijk
+        contact met u op. Alle verplichte
+        velden moeten ingevuld zijn.</p><br><br>
+        <p><span class="required" >* </span>  Verplichte velden</p>
+        <form id="contact-form" class="login-container">
+            <div class="input-group">
+              <input type="text" id="bedNaam" placeholder="Bedrijfsnaam" />
+            </div>
+          
+            <div class="input-row">
+              <div class="input-group">
+                <span class="required">*</span>
+                <input type="text" id="vNaam" placeholder="Voornaam" />
+              </div>
+              <div class="input-group">
+                <span class="required">*</span>
+                <input type="text" id="aNaam" placeholder="Achternaam" />
+              </div>
+            </div>
+          
+            <div class="input-group">
+              <span class="required">*</span>
+              <input type="text" id="email" placeholder="Email" />
+            </div>
+          
+            <div class="input-group">
+              <span class="required">*</span>
+              <input type="text" id="herhEmail" placeholder="Herhaling email" />
+            </div>
+          
+            <div class="input-group">
+              <input type="number" id="tel" placeholder="Telefoon nummer" />
+            </div>
+          
+            <div class="input-group">
+              <span class="required">*</span>
+              <textarea id="Omschrijving" placeholder="Omschrijving"></textarea>
+            </div>
+          
+            <button type="submit" class="login-btn">Verzenden</button>
+          </form>
+          
+        
+          
+</div>
+
+<!-- <div id="webshopPage">Webshop Page Content</div> -->
+<div id="particles-js"></div>
+<script type="text/javascript" src="particles.js"></script>
+<script type="text/javascript" src="app.js"></script>
+</div>
+<div id="overlay"></div>
+
+<div class="pop-upAlert" id="popup" style="display: none;">
+    <div class="pop-upContain">
+      <h3>Oeps!</h3>
+      <p style="width: 100%;">Niet alle velden zijn ingevuld. Alle velden met een * zijn verplicht. Vul ze in om te verzenden.</p>
+      <button id="bnAnuleren">Annuleren</button>
+    </div>
+  </div>
+
+  
+</body>
+</html>
